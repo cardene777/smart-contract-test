@@ -43,3 +43,8 @@ npx hardhat run scripts/greeter.ts --network goerli
 ```sh
 npx hardhat run scripts/greeterV2.ts --network goerli
 ```
+
+## Reference
+
+- [Upgrades Plugins](https://docs.openzeppelin.com/upgrades-plugins/1.x/)
+- [OpenZeppelinのContracts Upgradeableを使ってコントラクトをアップグレード出来るようにする](https://zenn.dev/razokulover/articles/708bcf4b9623c5)
