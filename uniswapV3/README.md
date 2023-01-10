@@ -1,12 +1,24 @@
-## Deploy
+## Setup
 
-### Compile
+```sh
+npm ci
+```
+
+- Get Alchemy API
+
+- https://www.alchemy.com/
+
+＊Solidity Version - 0.7.6
+
+## Compile
 
 ```sh
 npx hardhat compile
 ```
 
-### Local Node with a Testnet
+## Hardhat Test
+
+### Swap
 
 #### Tab1
 
@@ -24,4 +36,3 @@ npx hardhat test --network localhost
 
 - [Uniswap Doc](https://docs.uniswap.org/contracts/v3/guides/local-environment)
 - [Building Your First Uniswap Integration](https://uniswap.org/blog/your-first-uniswap-integration)
-
