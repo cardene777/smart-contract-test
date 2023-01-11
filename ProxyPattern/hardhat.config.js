@@ -24,10 +24,10 @@ module.exports = {
     hardhat: {
       blockGasLimit: 30_000_000,
     },
-    goerli: {
-      url: ALCHEMY_API_KEY,
-      accounts: [`0x${GOERLI_PRIVATE_KEY}`]
-    },
+    // goerli: {
+    //   url: ALCHEMY_API_KEY,
+    //   accounts: [`0x${GOERLI_PRIVATE_KEY}`]
+    // },
   },
   gasReporter: {
     enabled: (process.env.REPORT_GAS) ? true : false,

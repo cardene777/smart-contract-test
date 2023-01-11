@@ -5,6 +5,10 @@ Smart Contract Test Repository
 
 - [upgradable](https://github.com/cardene777/smart-contract-test/tree/main/upgradable)
 
+## ProxyPattern
+
+- [ProxyPattern](https://github.com/cardene777/smart-contract-test/tree/main/ProxyPattern)
+
 ## UniswapV2
 
 - [uniswapB3](https://github.com/cardene777/smart-contract-test/tree/main/uniswapV2)
