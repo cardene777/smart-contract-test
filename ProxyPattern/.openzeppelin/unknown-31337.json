@@ -1,0 +1,183 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+    "txHash": "0x327f32386636eb4c849c1fa41f6a92e570848b2a8dab3da830d67418456b4dfe"
+  },
+  "proxies": [
+    {
+      "address": "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9",
+      "txHash": "0xb77b4d4979c865ae581e0babd55dab54284758aae9a6d81e8ee23b66f7feccb9",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+      "txHash": "0xd9959233951eb3cc6a6d4aac1204da33b3b43527641b8438adcb4a12ef94ea7f",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
+      "txHash": "0x57ce208783b496c9e1ccdca9aa524395b2e9b847abcdfdf570362bf9cd8f66ae",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707",
+      "txHash": "0x13a7892ab37aefdd076e189e5dc2743533ecffafe4d86add6b676850a0ef0c79",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "152949060a63793e5cc10ed3595e208acbfde2ad22a0cd1055f12256ea24bb37": {
+      "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "txHash": "0x8641f051f16a06a9905111a7e3a0a6bd3ebc05a683db086d212957882d469d47",
+      "layout": {
+        "solcVersion": "0.8.17",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "owner",
+            "offset": 2,
+            "slot": "0",
+            "type": "t_address",
+            "contract": "TransparentLogic",
+            "src": "contracts/TransparentLogic.sol:7"
+          },
+          {
+            "label": "name",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_string_storage",
+            "contract": "TransparentLogic",
+            "src": "contracts/TransparentLogic.sol:8"
+          },
+          {
+            "label": "age",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256",
+            "contract": "TransparentLogic",
+            "src": "contracts/TransparentLogic.sol:9"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "6b711a8d5ebb8187f1c3bf006419b0ba5860c6a3ba56d3309384a143496cf8d1": {
+      "address": "0x0165878A594ca255338adfa4d48449f69242Eb8F",
+      "txHash": "0x00ee8dc0752022e44ba2e05a30a78dd9032759259baf9bc660800e9ecfa73411",
+      "layout": {
+        "solcVersion": "0.8.17",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "owner",
+            "offset": 2,
+            "slot": "0",
+            "type": "t_address",
+            "contract": "TransparentLogicV2",
+            "src": "contracts/TransparentLogicV2.sol:7"
+          },
+          {
+            "label": "name",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_string_storage",
+            "contract": "TransparentLogicV2",
+            "src": "contracts/TransparentLogicV2.sol:8"
+          },
+          {
+            "label": "age",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256",
+            "contract": "TransparentLogicV2",
+            "src": "contracts/TransparentLogicV2.sol:9"
+          },
+          {
+            "label": "favoriteFruit",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_string_storage",
+            "contract": "TransparentLogicV2",
+            "src": "contracts/TransparentLogicV2.sol:10"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    }
+  }
+}
