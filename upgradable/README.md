@@ -44,6 +44,10 @@ npx hardhat run scripts/greeter.ts --network goerli
 npx hardhat run scripts/greeterV2.ts --network goerli
 ```
 
+## Result
+
+- [result.md](https://github.com/cardene777/smart-contract-test/blob/main/upgradable/doc/result.md)
+
 ## Reference
 
 - [Upgrades Plugins](https://docs.openzeppelin.com/upgrades-plugins/1.x/)
