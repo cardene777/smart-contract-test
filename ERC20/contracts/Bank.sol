@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.17;
+pragma solidity ^0.8.19;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
@@ -18,7 +18,7 @@ contract Bank {
         whitelistedTokens[symbol] = tokenAddress;
     }
 
-    function getWhitelistedTokenAddresses(bytes32 token) external returns(address) {
+    function getWhitelistedTokenAddresses(bytes32 token) external view returns(address) {
         return whitelistedTokens[token];
     }
 
