@@ -6,6 +6,12 @@
 $ npm install
 ```
 
+## Compile
+
+```bash
+$ npx hardhat compile
+```
+
 ## Test
 
 ```bash
@@ -23,5 +29,3 @@ $ npm run deploy:goerli
 ```bash
 $ npm run deploy:slack
 ```
-
-
