@@ -23,6 +23,11 @@ async function main(){
     );
   }
 
+  const RELAY_ADDRESS: string = process.env.RELAY_ADDRESS ?? "";
+  if (RELAY_ADDRESS === "") {
+    throw new Error("No value set for environment variable RELAY_ADDRESS");
+  }
+
   const INFURA_KEY: string = process.env.INFURA_KEY ?? "";
   if (INFURA_KEY === "") {
     throw new Error("No value set for environment variable INFURA_KEY");
@@ -43,14 +48,14 @@ async function main(){
   // その他のアドレス
   const otherAddress = new ethers.Wallet(OTHER_ADDRESS_PRIVATE_KEY, provider);
 
-  const contractAddress: string = "0xb7d1049Ff45Dd4b8144De5c795ADFf1b4e7C6e9e";
+  const contractAddress: string = "0xFE61b80207708c9a8b3C43fa84Ee7fA8F31420a8";
 
   const contract = new ethers.Contract(contractAddress, Token.abi, signer);
 
   // Ownerに対してERC20トークンをMint
   const tx = await contract.mint(
     PUBLIC_KEY,
-    ethers.utils.parseUnits("10000", decimals)
+    ethers.utils.parseUnits("100", decimals)
   );
 
   console.log(`tx.hash: ${tx.hash}`);
@@ -70,11 +75,8 @@ async function main(){
   await contract.connect(otherAddress).pause({ gasLimit: 300000 });
   console.log("cannot pause completed");
 
-  // ロールの付与
-  const grantRoleTx = await contract.grantRole(
-    PAUSER_ROLE,
-    otherAddress.address
-  );
+  // // RELAY_ADDRESSにロールの付与
+  const grantRoleTx = await contract.grantRole(PAUSER_ROLE, RELAY_ADDRESS);
   await grantRoleTx.wait();
   console.log("grantRole completed");
 
@@ -98,11 +100,13 @@ async function main(){
   await burnTx.wait();
   console.log("burn completed");
 
-  // ERC20トークンをTransfer
-  await contract.transfer(
+  ERC20トークンをTransfer
+  const transferTxHash = await contract.transfer(
     otherAddress.address,
     ethers.utils.parseUnits("10", decimals)
   );
+
+  console.log(`transfer transaction hash: ${transferTxHash.hash}`);
 
   // ERC20トークンを燃やす(権限がないため失敗する)
   await contract
