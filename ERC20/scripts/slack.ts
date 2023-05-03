@@ -71,9 +71,9 @@ async function main(){
   await unpauseTx.wait();
   console.log("unpause completed");
 
-  // コントラクトを停止(権限がないため失敗する)
-  await contract.connect(otherAddress).pause({ gasLimit: 300000 });
-  console.log("cannot pause completed");
+  // // コントラクトを停止(権限がないため失敗する)
+  // await contract.connect(otherAddress).pause({ gasLimit: 300000 });
+  // console.log("cannot pause completed");
 
   // // RELAY_ADDRESSにロールの付与
   const grantRoleTx = await contract.grantRole(PAUSER_ROLE, RELAY_ADDRESS);
@@ -89,18 +89,18 @@ async function main(){
   console.log("revokeRole completed");
 
   // ロールの付与(権限がないため失敗する)
-  await contract
-    .connect(otherAddress)
-    .grantRole(PAUSER_ROLE, signer.address, { gasLimit: 300000 });
+  // await contract
+  //   .connect(otherAddress)
+  //   .grantRole(PAUSER_ROLE, signer.address, { gasLimit: 300000 });
 
-  console.log("cannnot grantRole completed");
+  // console.log("cannnot grantRole completed");
 
   // ERC20トークンを燃やす
   const burnTx = await contract.burn(ethers.utils.parseUnits("1", decimals));
   await burnTx.wait();
   console.log("burn completed");
 
-  ERC20トークンをTransfer
+  // ERC20トークンをTransfer
   const transferTxHash = await contract.transfer(
     otherAddress.address,
     ethers.utils.parseUnits("10", decimals)
